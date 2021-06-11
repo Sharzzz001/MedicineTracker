@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientDetail">
+
+    <ProgressBar
+        android:id="@+id/ptpbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/ptname"
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+
+                android:layout_height="50sp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:textColor="@color/orange"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/ptemail"
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:textColor="@color/orange"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ptalarmsrecview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                app:layout_constraintBottom_toTopOf="@+id/delPatient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ptemail" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight=".3"
+            >
+            <Button
+                android:id="@+id/delPatient"
+                style="@style/StrokeButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="delPatient"
+                android:text="Delete Patient" />
+
+            <Button
+                android:id="@+id/addAlarm"
+                style="@style/StrokeButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="addAlarm"
+                android:text="Add Alarm" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16dp"
+        android:id="@+id/noitem"
+        android:fontFamily="@font/sf_pro_display_semibold"
+        android:text="No alarms found"
+        android:visibility="invisible"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

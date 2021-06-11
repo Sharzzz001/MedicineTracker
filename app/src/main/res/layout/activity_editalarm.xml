@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientMedicines.editalarm">
+
+    <ListView
+        android:id="@+id/ListView2"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinnerback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deletenew"
+        app:layout_constraintVertical_bias="0.303" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarms:"
+        app:layout_constraintBottom_toTopOf="@+id/ListView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarms:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        app:layout_constraintVertical_bias="0.169" />
+
+    <Button
+        android:id="@+id/deletenew"
+        style="@style/SolidButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/crossicon"
+        android:drawableTint="@color/white"
+        android:text="Delete Medicine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455" />
+
+    <Button
+        android:id="@+id/save"
+        style="@style/SolidButtonStyle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/saveicon"
+        android:drawableTint="@color/white"
+        android:text="Save new alarms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addnew"
+        style="@style/SolidButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/timericon"
+        android:drawableTint="@color/white"
+        android:text="Add new alarms"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345" />
+
+    <Button
+        android:id="@+id/snoozeButton"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:drawableTop="@drawable/snoozeicon"
+        android:drawableTint="@color/white"
+        android:text="Snooze"
+        android:textSize="20dp"
+        style="@style/SolidButtonStyle1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/name2"
+        style="@style/LabelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="TextView"
+        android:textColor="@color/orange"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/addnew"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toTopOf="@+id/addnew"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989"
+        app:srcCompat="@drawable/pill" />
+
+    <TextView
+        android:id="@+id/type"
+        style="@style/LabelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="type"
+        android:textColor="@color/account"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/addnew"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/pot"
+        style="@style/LabelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="type"
+        android:textColor="@color/account"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/addnew"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toEndOf="@+id/type"
+        app:layout_constraintTop_toBottomOf="@+id/name2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

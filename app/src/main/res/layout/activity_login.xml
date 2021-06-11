@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginRegister.login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/ToolbarStyle">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:maxWidth="32px"
+                android:maxHeight="32px"
+                android:onClick="gotosplash"
+                android:src="@drawable/ic_back" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/containerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:layout_margin="@dimen/container_layout_margin">
+
+            <TextView
+                android:id="@+id/login_title"
+                style="@style/LabelStyle"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="@string/login_title"
+                android:textColor="@color/orange" />
+
+            <TextView
+                android:id="@+id/login_welcome_msg"
+                style="@style/LabelStyle"
+                android:layout_below="@id/login_title"
+                android:layout_marginTop="@dimen/layout_in_between_margins"
+                android:text="@string/login_welcome_txt" />
+
+            <EditText
+                android:id="@+id/logemailid"
+                style="@style/EditTextStyle"
+                android:layout_below="@id/login_welcome_msg"
+                android:layout_marginTop="@dimen/layout_in_between_margins"
+                android:hint="@string/email_address_hint"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/logpassword"
+                style="@style/EditTextStyle"
+                android:layout_below="@id/logemailid"
+                android:layout_marginTop="@dimen/layout_in_between_margins"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/forgot_password"
+                style="@style/LabelStyle"
+                android:layout_below="@id/logpassword"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/layout_in_between_margins"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="@string/forgot_password"
+                android:onClick="forgotpass"
+                android:textColor="@color/orange"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/logregbtn12"
+                style="@style/SolidButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_below="@id/forgot_password"
+                android:layout_marginTop="@dimen/layout_in_between_margins"
+                android:text="@string/login_btn_label" />
+
+            <RelativeLayout
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logregbtn12"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <ProgressBar
+                    android:id="@+id/progress_circular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/login_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/have_account"
+                    style="@style/LabelStyle"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/no_account"
+                    android:textColor="@color/account"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sign_up"
+                    style="@style/LabelStyle"
+                    android:onClick="signup"
+                    android:layout_toEndOf="@id/have_account"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/signup_label"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logregbtn12"
+                android:layout_marginTop="@dimen/divider_top_and_bottom_margins"
+                android:layout_marginBottom="@dimen/divider_top_and_bottom_margins"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

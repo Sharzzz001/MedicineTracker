@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddAlarm.AddAlarmActivity"
+    android:gravity="bottom"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/testy"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/textView"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10sp"
+        android:id="@+id/toplin"
+        >
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/pill" />
+
+        <TextView
+            android:id="@+id/name1"
+            style="@style/LabelStyle"
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:outlineAmbientShadowColor="@color/black"
+            android:text="TextView"
+            android:textColor="@color/orange"
+            android:textSize="40sp"
+            />
+
+        <ImageButton
+            android:id="@+id/button_timepicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/add_alrm"
+            android:tint="@color/white"
+            android:background="@drawable/roundbackbutton"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:gravity="center_horizontal"
+            style="@style/SolidButtonStyle"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="@color/orange"
+            android:text="cancel all alarms"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/done"
+            android:gravity="center_horizontal"
+            style="@style/SolidButtonStyle"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="@color/orange"
+            android:text="save Alarms"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_margin="10sp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:background="@drawable/spinnerback"
+        android:id="@+id/listview1"
+        android:layout_above="@+id/LinearLayout2"
+        android:layout_below="@+id/toplin">
+    </ListView>
+
+</RelativeLayout>
