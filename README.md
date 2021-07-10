@@ -1,5 +1,5 @@
 # MedicineTracker
-Help user to keep track on tablet expire date and alert to take tablets on scheduled time.
+Help user to keep track on tablet expiry date and alert to take tablets on scheduled time.
 This project aims to help people track their medicine regime easily and set alarms to remind them.
 It is also an efficient way to view your patients or family’s medication schedule.
 
